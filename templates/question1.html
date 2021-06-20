@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% load  static %}
+    <link rel="stylesheet" href="{% static 'css_files/presentation.css'%}">
+{% endblock head %}
+
+{% block title %}Quiz{% endblock title %}
+
+{% block body %}
+    <div id='quiz_time' class='visible'>
+        <h1>Quiz test</h1>
+        <p id="category">Loading...</p>
+        <p id="difficulty"></p>
+        <p id="question"></p>
+        
+
+        <div id="1" class="common_style" onclick="answerReply(this)"></div>
+        <div id="2" class="common_style" onclick="answerReply(this)"></div>
+        <div id="3" class="common_style" onclick="answerReply(this)"></div>
+        <div id="4" class="common_style" onclick="answerReply(this)"></div>
+
+        <button id="next" onclick='fristSelectAnswer()'><i>Next Question</i></button>
+        <p id='error_message' class='test_over'></P>
+        <div id="result"></div>
+        <button id="submit_test" class="test_over" onclick = 'resultOutput()'>Submit</button>
+    </div>
+    
+        
+    <div  id='result_time' class='test_over'>    
+        <p id="timeTaken"></p>
+        <p id="question_1"  class="common_style"></p>
+        <p id="question_2"  class="common_style"></p>
+        <p id="question_3"  class="common_style"></p>
+        <p id="question_4"  class="common_style"></p>
+        <p id="question_5"  class="common_style"></p>
+        <p id="question_6"  class="common_style"></p>
+        <p id="question_7"  class="common_style"></p>
+        <p id="question_8"  class="common_style"></p>
+        <p id="question_9"  class="common_style"></p>
+        <p id="question_10" class="common_style"></p>
+        <p id='quiz_score'></p>
+    </div>
+{% endblock body %}
+
